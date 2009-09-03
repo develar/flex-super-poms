@@ -236,7 +236,6 @@
   <component name="ProjectDetails">
     <option name="projectName" value="superPoms" />
   </component>
-  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
     <option name="state" value="org.zmlx.hg4idea.provider.HgCommittedChangesProvider$HgRepositoryLocation@16dafa91" />
   </component>
@@ -253,14 +252,15 @@
       <MavenSettings>
         <option name="myGeneralSettings">
           <MavenGeneralSettings>
-            <option name="checksumPolicy" value="fail" />
-            <option name="failureBehavior" value="fail-fast" />
+            <option name="checksumPolicy" value="FAIL" />
+            <option name="failureBehavior" value="FAST" />
             <option name="localRepository" value="" />
             <option name="mavenHome" value="" />
             <option name="mavenSettingsFile" value="" />
             <option name="nonRecursive" value="false" />
-            <option name="pluginUpdatePolicy" value="false" />
+            <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
             <option name="printErrorStackTraces" value="false" />
+            <option name="snapshotUpdatePolicy" value="ALWAYS_UPDATE" />
             <option name="usePluginRegistry" value="false" />
             <option name="workOffline" value="false" />
           </MavenGeneralSettings>
@@ -279,7 +279,9 @@
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="goals">
-              <list />
+              <list>
+                <option value="deploy" />
+              </list>
             </option>
             <option name="profiles">
               <set />
@@ -299,14 +301,15 @@
       <MavenSettings>
         <option name="myGeneralSettings">
           <MavenGeneralSettings>
-            <option name="checksumPolicy" value="fail" />
-            <option name="failureBehavior" value="fail-fast" />
+            <option name="checksumPolicy" value="FAIL" />
+            <option name="failureBehavior" value="FAST" />
             <option name="localRepository" value="" />
             <option name="mavenHome" value="" />
             <option name="mavenSettingsFile" value="" />
             <option name="nonRecursive" value="false" />
-            <option name="pluginUpdatePolicy" value="false" />
+            <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
             <option name="printErrorStackTraces" value="false" />
+            <option name="snapshotUpdatePolicy" value="DO_NOT_UPDATE" />
             <option name="usePluginRegistry" value="false" />
             <option name="workOffline" value="false" />
           </MavenGeneralSettings>
@@ -327,6 +330,7 @@
             <option name="goals">
               <list>
                 <option value="install" />
+                <option value="-o" />
               </list>
             </option>
             <option name="profiles">
