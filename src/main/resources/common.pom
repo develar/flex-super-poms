@@ -119,6 +119,18 @@
 							<version>${fdk.version}</version>
 							<type>pom</type>
 						</dependency>
+						<dependency>
+							<groupId>com.adobe.flex.compiler</groupId>
+							<artifactId>asdoc</artifactId>
+							<version>${fdk.version}</version>
+							<type>zip</type>
+      						<classifier>template</classifier>
+						</dependency>
+						<dependency>
+							<groupId>com.adobe.flex</groupId>
+							<artifactId>adt</artifactId>
+							<version>4.0.0.10000</version>
+						</dependency>
 					</dependencies>
 
 					<configuration>
