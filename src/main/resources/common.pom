@@ -3,12 +3,6 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.sonatype.flexmojos</groupId>
-		<artifactId>flexmojos-super-pom-commons</artifactId>
-		<version>3.4-SNAPSHOT</version>
-	</parent>
-
 	<groupId>org.flyti.superPOMs</groupId>
 	<artifactId>common</artifactId>
 	<version>${project.version}</version>
@@ -62,43 +56,46 @@
 				<type>swc</type>
 			</dependency>
 
-			<dependency>
-				<groupId>org.sonatype.flexmojos</groupId>
-				<artifactId>flexmojos-unittest-support</artifactId>
-				<version>${flexMojos.version}</version>
-				<type>swc</type>
-				<scope>test</scope>
-				<exclusions>
-					<exclusion>
-						<groupId>com.adobe.flexunit</groupId>
-						<artifactId>flexunit</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>com.asunit</groupId>
-						<artifactId>asunit</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>net.digitalprimates</groupId>
-						<artifactId>fluint</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>com.adobe.flex.framework</groupId>
-      					<artifactId>framework</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>advancedflex</groupId>
-      					<artifactId>debugger</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>com.adobe.flex.framework</groupId>
-      					<artifactId>playerglobal</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
+			<!--<dependency>-->
+				<!--<groupId>org.sonatype.flexmojos</groupId>-->
+				<!--<artifactId>flexmojos-unittest-support</artifactId>-->
+				<!--<version>${flexMojos.version}</version>-->
+				<!--<type>swc</type>-->
+				<!--<scope>test</scope>-->
+				<!--<exclusions>-->
+					<!--<exclusion>-->
+						<!--<groupId>com.adobe.flexunit</groupId>-->
+						<!--<artifactId>flexunit</artifactId>-->
+					<!--</exclusion>-->
+					<!--<exclusion>-->
+						<!--<groupId>com.asunit</groupId>-->
+						<!--<artifactId>asunit</artifactId>-->
+					<!--</exclusion>-->
+					<!--<exclusion>-->
+						<!--<groupId>net.digitalprimates</groupId>-->
+						<!--<artifactId>fluint</artifactId>-->
+					<!--</exclusion>-->
+					<!--<exclusion>-->
+						<!--<groupId>com.adobe.flex.framework</groupId>-->
+      					<!--<artifactId>framework</artifactId>-->
+					<!--</exclusion>-->
+					<!--<exclusion>-->
+						<!--<groupId>advancedflex</groupId>-->
+      					<!--<artifactId>debugger</artifactId>-->
+					<!--</exclusion>-->
+					<!--<exclusion>-->
+						<!--<groupId>com.adobe.flex.framework</groupId>-->
+      					<!--<artifactId>playerglobal</artifactId>-->
+					<!--</exclusion>-->
+				<!--</exclusions>-->
+			<!--</dependency>-->
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
+		<sourceDirectory>src/main/flex</sourceDirectory>
+		<testSourceDirectory>src/test/flex</testSourceDirectory>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -108,39 +105,43 @@
 						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
-				<plugin>
-					<groupId>org.sonatype.flexmojos</groupId>
-					<artifactId>flexmojos-maven-plugin</artifactId>
-					<version>${flexMojos.version}</version>
-					<dependencies>
-						<dependency>
-							<groupId>com.adobe.flex</groupId>
-							<artifactId>compiler</artifactId>
-							<version>${fdk.version}</version>
-							<type>pom</type>
-						</dependency>
-						<dependency>
-							<groupId>com.adobe.flex.compiler</groupId>
-							<artifactId>asdoc</artifactId>
-							<version>${fdk.version}</version>
-							<type>zip</type>
-      						<classifier>template</classifier>
-						</dependency>
-						<dependency>
-							<groupId>com.adobe.flex</groupId>
-							<artifactId>adt</artifactId>
-							<version>4.0.0.10000</version>
-						</dependency>
-					</dependencies>
-
-					<configuration>
-						<warnings>
-							<noConstructor>false</noConstructor>
-						</warnings>
-					</configuration>
-				</plugin>
 			</plugins>
 		</pluginManagement>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${flexMojos.version}</version>
+				<extensions>true</extensions>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${fdk.version}</version>
+						<type>pom</type>
+					</dependency>
+					<dependency>
+						<groupId>com.adobe.flex.compiler</groupId>
+						<artifactId>asdoc</artifactId>
+						<version>${fdk.version}</version>
+						<type>zip</type>
+						<classifier>template</classifier>
+					</dependency>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>adt</artifactId>
+						<version>4.0.0.10000</version>
+					</dependency>
+				</dependencies>
+
+				<configuration>
+					<warnings>
+						<noConstructor>false</noConstructor>
+					</warnings>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 	<profiles>
@@ -175,16 +176,16 @@
 					<scope>test</scope>
 				</dependency>
 				<dependency>
-					<groupId>org.flexunit</groupId>
+					<groupId>com.adobe.flexunit</groupId>
 					<artifactId>flexunit</artifactId>
-					<version>4.0-SNAPSHOT</version>
+					<version>4.0-beta-2</version>
 					<type>swc</type>
 					<scope>test</scope>
 				</dependency>
 				<dependency>
-					<groupId>org.flexunit</groupId>
+					<groupId>com.adobe.flexunit</groupId>
 					<artifactId>uiRunner</artifactId>
-					<version>4.0-SNAPSHOT</version>
+					<version>4.0-beta-2</version>
 					<type>swc</type>
 					<scope>test</scope>
 				</dependency>
