@@ -5,7 +5,7 @@
 	<name>Super POMs for Flex/AIR</name>
 	<groupId>org.flyti.superPOMs</groupId>
 	<artifactId>superPoms</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<build>
