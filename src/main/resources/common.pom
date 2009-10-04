@@ -8,10 +8,9 @@
 	<version>${project.version}</version>
 	<packaging>pom</packaging>
 	<properties>
-		<fdk.version>4.0.0-SNAPSHOT</fdk.version>
-		<flex.sdk.version>4.0.0-SNAPSHOT</flex.sdk.version>
-		<flexMojos.version>3.4-SNAPSHOT</flexMojos.version>
-		<flashPlayer.version>10.0.12.36</flashPlayer.version>
+		<fdk.version>4.0.0.10863</fdk.version>
+		<flex.sdk.version>4.0.0.10863</flex.sdk.version>
+		<flexMojos.version>3.4-20091004.082844</flexMojos.version>
 	</properties>
 
 	<dependencyManagement>
