@@ -10,7 +10,7 @@
 	<properties>
 		<fdk.version>4.0.0.10863</fdk.version>
 		<flex.sdk.version>4.0.0.10863</flex.sdk.version>
-		<flexMojos.version>3.4-20091004.082844</flexMojos.version>
+		<flexMojos.version>3.4-20091004.125426-32</flexMojos.version>
 	</properties>
 
 	<dependencyManagement>
