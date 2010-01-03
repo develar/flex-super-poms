@@ -5,7 +5,7 @@
 	<name>Super POMs for Flex/AIR</name>
 	<groupId>org.flyti.superPOMs</groupId>
 	<artifactId>superPoms</artifactId>
-	<version>1.1</version>
+	<version>1.1.5</version>
 	<packaging>pom</packaging>
 
 	<build>
@@ -18,7 +18,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.4.1</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -49,6 +49,13 @@
 									<artifactId>common</artifactId>
 									<type>pom</type>
 								</artifact>
+								<artifact>
+									<file>${project.build.outputDirectory}/flyti-forge.pom</file>
+									<artifactId>flyti-forge</artifactId>
+									<groupId>org.flyti</groupId>
+									<version>1.0</version>
+									<type>pom</type>
+								</artifact>
 							</artifacts>
 							<updatePom>false</updatePom>
 						</configuration>
@@ -62,24 +69,14 @@
 		<connection>scm:hg:https://develar@bitbucket.org/develar/mavenflexsuperpoms</connection>
 	</scm>
 
-	<!--<distributionManagement>-->
-		<!--<downloadUrl>http://maven.flyti.org/repo</downloadUrl>-->
-		<!--<repository>-->
-			<!--<id>flyti-releases</id>-->
-			<!--<url>http://maven.flyti.org/flyti-releases</url>-->
-		<!--</repository>-->
-		<!--<snapshotRepository>-->
-			<!--<id>flyti-snapshots</id>-->
-			<!--<url>http://maven.flyti.org/flyti-snapshots</url>-->
-		<!--</snapshotRepository>-->
-	<!--</distributionManagement>-->
-
 	<distributionManagement>
-		<downloadUrl>http://astra.thewebproduction.com:8081/artifactory/repo</downloadUrl>
 		<repository>
-			<id>twp-thirdparty</id>
-			<url>http://astra.rit.com:8081/artifactory/thirdparty</url>
-			<uniqueVersion>false</uniqueVersion>
+			<id>twp-thirdparty-releases</id>
+			<url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-releases</url>
 		</repository>
+		<snapshotRepository>
+			<id>twp-thirdparty-snapshots</id>
+			<url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-snapshots</url>
+		</snapshotRepository>
 	</distributionManagement>
 </project>

@@ -8,9 +8,9 @@
 	<version>${project.version}</version>
 	<packaging>pom</packaging>
 	<properties>
-		<fdk.version>4.0.0.10863</fdk.version>
-		<flex.sdk.version>4.0.0.10863</flex.sdk.version>
-		<flexMojos.version>3.4-20091004.125426-32</flexMojos.version>
+		<fdk.version>4.0.0.13110</fdk.version>
+		<flex.sdk.version>4.0.0.13110</flex.sdk.version>
+		<flexMojos.version>3.5-de1</flexMojos.version>
 	</properties>
 
 	<dependencyManagement>
@@ -44,6 +44,13 @@
 
 			<dependency>
 				<groupId>com.adobe.flex.framework</groupId>
+				<artifactId>osmf</artifactId>
+				<version>${fdk.version}</version>
+				<type>swc</type>
+			</dependency>
+
+			<dependency>
+				<groupId>com.adobe.flex.framework</groupId>
 				<artifactId>spark</artifactId>
 				<version>${fdk.version}</version>
 				<type>swc</type>
@@ -54,40 +61,6 @@
 				<version>${fdk.version}</version>
 				<type>swc</type>
 			</dependency>
-
-			<!--<dependency>-->
-				<!--<groupId>org.sonatype.flexmojos</groupId>-->
-				<!--<artifactId>flexmojos-unittest-support</artifactId>-->
-				<!--<version>${flexMojos.version}</version>-->
-				<!--<type>swc</type>-->
-				<!--<scope>test</scope>-->
-				<!--<exclusions>-->
-					<!--<exclusion>-->
-						<!--<groupId>com.adobe.flexunit</groupId>-->
-						<!--<artifactId>flexunit</artifactId>-->
-					<!--</exclusion>-->
-					<!--<exclusion>-->
-						<!--<groupId>com.asunit</groupId>-->
-						<!--<artifactId>asunit</artifactId>-->
-					<!--</exclusion>-->
-					<!--<exclusion>-->
-						<!--<groupId>net.digitalprimates</groupId>-->
-						<!--<artifactId>fluint</artifactId>-->
-					<!--</exclusion>-->
-					<!--<exclusion>-->
-						<!--<groupId>com.adobe.flex.framework</groupId>-->
-      					<!--<artifactId>framework</artifactId>-->
-					<!--</exclusion>-->
-					<!--<exclusion>-->
-						<!--<groupId>advancedflex</groupId>-->
-      					<!--<artifactId>debugger</artifactId>-->
-					<!--</exclusion>-->
-					<!--<exclusion>-->
-						<!--<groupId>com.adobe.flex.framework</groupId>-->
-      					<!--<artifactId>playerglobal</artifactId>-->
-					<!--</exclusion>-->
-				<!--</exclusions>-->
-			<!--</dependency>-->
 		</dependencies>
 	</dependencyManagement>
 
@@ -130,11 +103,13 @@
 					<dependency>
 						<groupId>com.adobe.flex</groupId>
 						<artifactId>adt</artifactId>
-						<version>4.0.0.10000</version>
+						<version>4.0.0.12715</version>
 					</dependency>
 				</dependencies>
 
 				<configuration>
+					<accessible>false</accessible>
+					<targetPlayer>10.0.42</targetPlayer>
 					<warnings>
 						<noConstructor>false</noConstructor>
 					</warnings>
@@ -164,7 +139,7 @@
 		<profile>
 			<id>flexTestDependencies</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<dependencies>
 				<dependency>
