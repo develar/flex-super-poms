@@ -8,9 +8,9 @@
 	<version>${project.version}</version>
 	<packaging>pom</packaging>
 	<properties>
-		<fdk.version>4.0.0.13110</fdk.version>
-		<flex.sdk.version>4.0.0.13110</flex.sdk.version>
-		<flexMojos.version>3.5-de1</flexMojos.version>
+		<fdk.version>4.0.0.14025</fdk.version>
+		<flex.sdk.version>4.0.0.14025</flex.sdk.version>
+		<flexMojos.version>3.5-de3</flexMojos.version>
 	</properties>
 
 	<dependencyManagement>
@@ -139,27 +139,20 @@
 		<profile>
 			<id>flexTestDependencies</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 			<dependencies>
 				<dependency>
-					<groupId>org.hamcrest</groupId>
-					<artifactId>hamcrest-as3</artifactId>
-					<version>1.0</version>
-					<type>swc</type>
-					<scope>test</scope>
-				</dependency>
-				<dependency>
 					<groupId>com.adobe.flexunit</groupId>
 					<artifactId>flexunit</artifactId>
-					<version>4.0-beta-2</version>
+					<version>4.0-rc-1.1</version>
 					<type>swc</type>
 					<scope>test</scope>
 				</dependency>
 				<dependency>
 					<groupId>com.adobe.flexunit</groupId>
 					<artifactId>uiRunner</artifactId>
-					<version>4.0-beta-2</version>
+					<version>4.0-rc-1.1</version>
 					<type>swc</type>
 					<scope>test</scope>
 				</dependency>
