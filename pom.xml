@@ -5,7 +5,7 @@
 	<name>Super POMs for Flex/AIR</name>
 	<groupId>org.flyti.superPOMs</groupId>
 	<artifactId>superPoms</artifactId>
-	<version>1.1.8</version>
+	<version>1.1.9</version>
 	<packaging>pom</packaging>
 
 	<build>
@@ -53,7 +53,7 @@
 									<file>${project.build.outputDirectory}/flyti-forge.pom</file>
 									<artifactId>flyti-forge</artifactId>
 									<groupId>org.flyti</groupId>
-									<version>1.0.3</version>
+									<version>1.0.4</version>
 									<type>pom</type>
 								</artifact>
 							</artifacts>
