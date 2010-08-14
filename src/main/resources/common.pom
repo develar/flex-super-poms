@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.flyti.superPOMs</groupId>
@@ -8,9 +7,9 @@
   <version>${project.version}</version>
   <packaging>pom</packaging>
   <properties>
-    <fdk.version>4.1.0.17115</fdk.version>
-    <flex.sdk.version>4.0.0.17115</flex.sdk.version>
-    <flexMojos.version>3.8-de0</flexMojos.version>
+    <fdk.version>4.1.0.17251</fdk.version>
+    <flex.sdk.version>4.0.0.17251</flex.sdk.version>
+    <flexMojos.version>3.8-de3</flexMojos.version>
   </properties>
 
   <dependencyManagement>
@@ -63,11 +62,10 @@
       </dependency>
 
       <dependency>
-        <groupId>com.adobe.flex.framework</groupId>
+        <groupId>com.adobe.flash</groupId>
         <artifactId>playerglobal</artifactId>
         <type>swc</type>
-        <version>${fdk.version}</version>
-        <classifier>10</classifier>
+        <version>10.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -118,7 +116,7 @@
 
         <configuration>
           <accessible>false</accessible>
-          <targetPlayer>10.0.45</targetPlayer>
+          <targetPlayer>10.1</targetPlayer>
           <warnings>
             <noConstructor>false</noConstructor>
           </warnings>
