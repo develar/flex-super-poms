@@ -5,11 +5,11 @@
   <name>Super POMs for Flex/AIR</name>
   <groupId>org.flyti.superPOMs</groupId>
   <artifactId>superPoms</artifactId>
-  <version>1.1.16</version>
+  <version>1.1.17</version>
   <packaging>pom</packaging>
 
   <properties>
-    <flash-forge.version>1.0.11</flash-forge.version>
+    <flash-forge.version>1.0.12</flash-forge.version>
     <java-forge.version>1.0</java-forge.version>
   </properties>
 
@@ -55,7 +55,7 @@
                   <type>pom</type>
                 </artifact>
                 <artifact>
-                  <file>${project.build.outputDirectory}/flyti-forge.pom</file>
+                  <file>${project.build.outputDirectory}/flash-forge.pom</file>
                   <groupId>org.flyti</groupId>
                   <artifactId>flash-forge</artifactId>
                   <version>${flash-forge.version}</version>
@@ -84,7 +84,7 @@
   <distributionManagement>
     <repository>
       <id>twp-thirdparty-releases</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-releases</url>
+      <url>http://repository.flyti.org/</url>
     </repository>
     <snapshotRepository>
       <id>twp-thirdparty-snapshots</id>
