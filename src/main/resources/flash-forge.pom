@@ -35,29 +35,35 @@
       <plugin>
         <groupId>org.sonatype.flexmojos</groupId>
         <artifactId>flexmojos-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>sources</id>
-            <goals>
-              <goal>sources</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
           <fixedLiteralVector>true</fixedLiteralVector>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
 
   <distributionManagement>
     <repository>
-      <id>twp-thirdparty-releases</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-releases</url>
+      <id>flyti-releases</id>
+      <url>http://flyti.org:8081/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>twp-thirdparty-snapshots</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-snapshots</url>
+      <id>flyti-snapshots</id>
+      <url>http://flyti.org:8081/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 </project>

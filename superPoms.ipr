@@ -47,7 +47,7 @@
     <option name="GENERATE_NO_WARNINGS" value="true" />
     <option name="DEPRECATION" value="false" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8" />
   <component name="IdProvider" IDEtalkID="46A780C3C3A98274CDC5ACE0CFFCC9E8" />
   <component name="InspectionProjectProfileManager">
     <list size="4">
@@ -330,7 +330,7 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="hg4idea" />
+    <mapping directory="" vcs="Git" />
   </component>
 </project>
 

@@ -9,8 +9,8 @@
   <packaging>pom</packaging>
 
   <properties>
-    <flash-forge.version>1.0.12</flash-forge.version>
-    <java-forge.version>1.0</java-forge.version>
+    <flash-forge.version>1.0.13</flash-forge.version>
+    <java-forge.version>1.0.1</java-forge.version>
   </properties>
 
   <build>
@@ -83,12 +83,12 @@
 
   <distributionManagement>
     <repository>
-      <id>twp-thirdparty-releases</id>
-      <url>http://repository.flyti.org/</url>
+      <id>flyti-releases</id>
+      <url>http://flyti.org:8081/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>twp-thirdparty-snapshots</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-snapshots</url>
+      <id>flyti-snapshots</id>
+      <url>http://flyti.org:8081/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 </project>

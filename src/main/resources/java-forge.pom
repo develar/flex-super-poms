@@ -81,12 +81,12 @@
 
   <distributionManagement>
     <repository>
-      <id>twp-thirdparty-releases</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-releases</url>
+      <id>flyti-releases</id>
+      <url>http://flyti.org:8081/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>twp-thirdparty-snapshots</id>
-      <url>http://astra.thewebproduction.com:8081/nexus/content/repositories/thirdparty-snapshots</url>
+      <id>flyti-snapshots</id>
+      <url>http://flyti.org:8081/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
