@@ -7,9 +7,9 @@
   <version>${project.version}</version>
   <packaging>pom</packaging>
   <properties>
-    <fdk.version>4.5.0.17836</fdk.version>
-    <flex.sdk.version>4.5.0.17836</flex.sdk.version>
-    <flexMojos.version>3.8-de3.1</flexMojos.version>
+    <fdk.version>4.5.0.18365</fdk.version>
+    <flex.sdk.version>4.5.0.18365</flex.sdk.version>
+    <flexMojos.version>4.0-SNAPSHOT</flexMojos.version>
   </properties>
 
   <dependencyManagement>
@@ -17,7 +17,7 @@
       <dependency>
         <groupId>flashx</groupId>
         <artifactId>textLayout</artifactId>
-        <version>2.0.154</version>
+        <version>2.0.189</version>
         <type>swc</type>
       </dependency>
 
@@ -62,7 +62,7 @@
       </dependency>
 
       <dependency>
-        <groupId>com.adobe.flash</groupId>
+        <groupId>com.adobe.flex.framework</groupId>
         <artifactId>playerglobal</artifactId>
         <type>swc</type>
         <version>10.1</version>
@@ -100,70 +100,40 @@
             <version>${fdk.version}</version>
             <type>pom</type>
           </dependency>
-          <dependency>
-            <groupId>com.adobe.flex.compiler</groupId>
-            <artifactId>asdoc</artifactId>
-            <version>${fdk.version}</version>
-            <type>zip</type>
-            <classifier>template</classifier>
-          </dependency>
-          <dependency>
-            <groupId>com.adobe.flex</groupId>
-            <artifactId>adt</artifactId>
-            <version>4.0.0.15885</version>
-          </dependency>
         </dependencies>
 
         <configuration>
           <accessible>false</accessible>
           <targetPlayer>10.1</targetPlayer>
-          <warnings>
-            <noConstructor>false</noConstructor>
-          </warnings>
+          <compilerWarnings>
+            <warn-no-constructor>false</warn-no-constructor>
+          </compilerWarnings>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
   <profiles>
-    <profile>
-      <id>IDEBuilder</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.sonatype.flexmojos</groupId>
-              <artifactId>flexmojos-maven-plugin</artifactId>
-              <version>${flexMojos.version}</version>
-              <configuration>
-                <configurationReport>true</configurationReport>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>flexTestDependencies</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>com.adobe.flexunit</groupId>
-          <artifactId>flexunit</artifactId>
-          <version>4.0-rc-1.1</version>
-          <type>swc</type>
-          <scope>test</scope>
-        </dependency>
-        <dependency>
-          <groupId>com.adobe.flexunit</groupId>
-          <artifactId>uiRunner</artifactId>
-          <version>4.0-rc-1.1</version>
-          <type>swc</type>
-          <scope>test</scope>
-        </dependency>
-      </dependencies>
-    </profile>
+    <!--<profile>-->
+      <!--<id>flexTestDependencies</id>-->
+      <!--<activation>-->
+        <!--<activeByDefault>true</activeByDefault>-->
+      <!--</activation>-->
+      <!--<dependencies>-->
+        <!--<dependency>-->
+          <!--<groupId>com.adobe.flexunit</groupId>-->
+          <!--<artifactId>flexunit</artifactId>-->
+          <!--<version>4.0-rc-1.1</version>-->
+          <!--<type>swc</type>-->
+          <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+          <!--<groupId>com.adobe.flexunit</groupId>-->
+          <!--<artifactId>uiRunner</artifactId>-->
+          <!--<version>4.0-rc-1.1</version>-->
+          <!--<type>swc</type>-->
+          <!--<scope>test</scope>-->
+        <!--</dependency>-->
+      <!--</dependencies>-->
+    <!--</profile>-->
   </profiles>
 </project>
