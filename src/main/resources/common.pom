@@ -9,7 +9,7 @@
   <properties>
     <fdk.version>4.5.0.18365</fdk.version>
     <flex.sdk.version>4.5.0.18365</flex.sdk.version>
-    <flexMojos.version>4.0-SNAPSHOT</flexMojos.version>
+    <flexMojos.version>4.0-de1</flexMojos.version>
   </properties>
 
   <dependencyManagement>
@@ -100,9 +100,15 @@
             <version>${fdk.version}</version>
             <type>pom</type>
           </dependency>
+          <dependency>
+            <groupId>com.intellij.flex.maven</groupId>
+            <artifactId>flexmojos-idea-configurator</artifactId>
+            <version>1.0-SNAPSHOT</version>
+          </dependency>
         </dependencies>
 
         <configuration>
+          <configurator>com.intellij.flex.maven.IdeaConfigurator</configurator>
           <accessible>false</accessible>
           <targetPlayer>10.1</targetPlayer>
           <compilerWarnings>
@@ -136,4 +142,17 @@
       <!--</dependencies>-->
     <!--</profile>-->
   </profiles>
+
+  <repositories>
+    <repository>
+      <id>flyti</id>
+      <url>http://repository.flyti.org/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>flyti</id>
+      <url>http://repository.flyti.org/</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
