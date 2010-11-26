@@ -67,6 +67,25 @@
         <type>swc</type>
         <version>10.1</version>
       </dependency>
+
+      <dependency>
+        <groupId>com.adobe.flex.framework</groupId>
+        <artifactId>airspark</artifactId>
+        <type>swc</type>
+        <version>${fdk.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.flex.framework</groupId>
+        <artifactId>airframework</artifactId>
+        <type>swc</type>
+        <version>${fdk.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.flex.framework</groupId>
+        <artifactId>airglobal</artifactId>
+        <version>${fdk.version}</version>
+        <type>swc</type>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -110,6 +129,7 @@
         <configuration>
           <configurator>com.intellij.flex.maven.IdeaConfigurator</configurator>
           <accessible>false</accessible>
+          <licenseLocalLookup>false</licenseLocalLookup>
           <targetPlayer>10.1</targetPlayer>
           <compilerWarnings>
             <warn-no-constructor>false</warn-no-constructor>
