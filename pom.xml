@@ -5,12 +5,12 @@
   <name>Super POMs for Flex/AIR</name>
   <groupId>org.flyti.superPOMs</groupId>
   <artifactId>superPoms</artifactId>
-  <version>22</version>
+  <version>26</version>
   <packaging>pom</packaging>
 
   <properties>
-    <flash-forge.version>18</flash-forge.version>
-    <java-forge.version>2</java-forge.version>
+    <flash-forge.version>21</flash-forge.version>
+    <java-forge.version>3</java-forge.version>
   </properties>
 
   <build>

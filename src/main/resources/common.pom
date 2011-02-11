@@ -9,7 +9,7 @@
   <properties>
     <fdk.version>4.5.0.18365</fdk.version>
     <flex.sdk.version>4.5.0.18365</flex.sdk.version>
-    <flexMojos.version>4.0-de1</flexMojos.version>
+    <flexMojos.version>4.0-de3</flexMojos.version>
   </properties>
 
   <dependencyManagement>
@@ -17,7 +17,7 @@
       <dependency>
         <groupId>flashx</groupId>
         <artifactId>textLayout</artifactId>
-        <version>2.0.189</version>
+        <version>1.1.604</version>
         <type>swc</type>
       </dependency>
 
@@ -122,7 +122,7 @@
           <dependency>
             <groupId>com.intellij.flex.maven</groupId>
             <artifactId>flexmojos-idea-configurator</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.1</version>
           </dependency>
         </dependencies>
 
