@@ -7,9 +7,9 @@
   <version>${project.version}</version>
   <packaging>pom</packaging>
   <properties>
-    <fdk.version>4.5.0.18365</fdk.version>
-    <flex.sdk.version>4.5.0.18365</flex.sdk.version>
-    <flexMojos.version>4.0-de4</flexMojos.version>
+    <fdk.version>4.5.0.20968</fdk.version>
+    <flex.sdk.version>4.5.0.20968</flex.sdk.version>
+    <flexMojos.version>4.0-de7</flexMojos.version>
   </properties>
 
   <dependencyManagement>
@@ -29,7 +29,19 @@
       </dependency>
       <dependency>
         <groupId>com.adobe.flex.framework</groupId>
+        <artifactId>air-framework-small</artifactId>
+        <version>${fdk.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.flex.framework</groupId>
         <artifactId>flex-framework</artifactId>
+        <version>${fdk.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.flex.framework</groupId>
+        <artifactId>flex-framework-small</artifactId>
         <version>${fdk.version}</version>
         <type>pom</type>
       </dependency>
@@ -65,7 +77,7 @@
         <groupId>com.adobe.flex.framework</groupId>
         <artifactId>playerglobal</artifactId>
         <type>swc</type>
-        <version>10.1</version>
+        <version>10.2</version>
       </dependency>
 
       <dependency>
@@ -83,7 +95,7 @@
       <dependency>
         <groupId>com.adobe.flex.framework</groupId>
         <artifactId>airglobal</artifactId>
-        <version>${fdk.version}</version>
+        <version>2.6</version>
         <type>swc</type>
       </dependency>
     </dependencies>
@@ -98,7 +110,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.4.3</version>
+          <version>2.5</version>
           <configuration>
             <encoding>UTF-8</encoding>
           </configuration>
@@ -119,18 +131,12 @@
             <version>${fdk.version}</version>
             <type>pom</type>
           </dependency>
-          <dependency>
-            <groupId>com.intellij.flex.maven</groupId>
-            <artifactId>flexmojos-idea-configurator</artifactId>
-            <version>1.0.4-de</version>
-          </dependency>
         </dependencies>
 
         <configuration>
-          <configurator>com.intellij.flex.maven.IdeaConfigurator</configurator>
           <accessible>false</accessible>
           <licenseLocalLookup>false</licenseLocalLookup>
-          <targetPlayer>10.1</targetPlayer>
+          <targetPlayer>10.2</targetPlayer>
           <compilerWarnings>
             <warn-no-constructor>false</warn-no-constructor>
           </compilerWarnings>
