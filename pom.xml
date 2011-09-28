@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <name>Super POMs for Flex/AIR</name>
   <groupId>org.flyti.superPOMs</groupId>
   <artifactId>superPoms</artifactId>
-  <version>29</version>
+  <version>30</version>
   <packaging>pom</packaging>
 
   <properties>
-    <flash-forge.version>24</flash-forge.version>
+    <flash-forge.version>25</flash-forge.version>
     <java-forge.version>4</java-forge.version>
   </properties>
 
