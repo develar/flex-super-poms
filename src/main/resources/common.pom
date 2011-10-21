@@ -101,8 +101,13 @@
   </dependencyManagement>
 
   <build>
-    <sourceDirectory>src/main/flex</sourceDirectory>
-    <testSourceDirectory>src/test/flex</testSourceDirectory>
+    <sourceDirectory>${project.basedir}/src</sourceDirectory>
+    <testSourceDirectory>${project.basedir}/testSrc</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>${project.basedir}/resources</directory>
+      </resource>
+    </resources>
 
     <pluginManagement>
       <plugins>
@@ -168,16 +173,16 @@
     <!--</profile>-->
   </profiles>
 
-  <repositories>
-    <repository>
-      <id>flyti</id>
-      <url>http://repository.flyti.org/</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>flyti</id>
-      <url>http://repository.flyti.org/</url>
-    </pluginRepository>
-  </pluginRepositories>
+  <!--<repositories>-->
+    <!--<repository>-->
+      <!--<id>flyti</id>-->
+      <!--<url>http://repository.flyti.org/</url>-->
+    <!--</repository>-->
+  <!--</repositories>-->
+  <!--<pluginRepositories>-->
+    <!--<pluginRepository>-->
+      <!--<id>flyti</id>-->
+      <!--<url>http://repository.flyti.org/</url>-->
+    <!--</pluginRepository>-->
+  <!--</pluginRepositories>-->
 </project>
