@@ -101,11 +101,11 @@
   </dependencyManagement>
 
   <build>
-    <sourceDirectory>${project.basedir}/src</sourceDirectory>
-    <testSourceDirectory>${project.basedir}/testSrc</testSourceDirectory>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>testSrc</testSourceDirectory>
     <resources>
       <resource>
-        <directory>${project.basedir}/resources</directory>
+        <directory>resources</directory>
       </resource>
     </resources>
 
@@ -138,6 +138,7 @@
         </dependencies>
 
         <configuration>
+          <localesSourcePath>locales/{locale}</localesSourcePath>
           <accessible>false</accessible>
           <licenseLocalLookup>false</licenseLocalLookup>
           <targetPlayer>10.2</targetPlayer>
