@@ -81,12 +81,8 @@
 
   <distributionManagement>
     <repository>
-      <id>flyti-releases</id>
-      <url>http://flyti.org:8081/content/repositories/releases</url>
+      <id>flash-mvn-repo</id>
+      <url>file:///Users/develar/flash-mvn-repo</url>
     </repository>
-    <snapshotRepository>
-      <id>flyti-snapshots</id>
-      <url>http://flyti.org:8081/content/repositories/snapshots</url>
-    </snapshotRepository>
   </distributionManagement>
 </project>
