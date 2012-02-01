@@ -4,11 +4,11 @@
   <name>Super POMs for Flex/AIR</name>
   <groupId>org.flyti.superPOMs</groupId>
   <artifactId>superPoms</artifactId>
-  <version>32</version>
+  <version>33</version>
   <packaging>pom</packaging>
 
   <properties>
-    <flash-forge.version>27</flash-forge.version>
+    <flash-forge.version>28</flash-forge.version>
     <java-forge.version>6</java-forge.version>
   </properties>
 
@@ -77,7 +77,7 @@
   </build>
 
   <scm>
-    <connection>scm:hg:https://develar@bitbucket.org/develar/mavenflexsuperpoms</connection>
+    <connection>scm:git:file://localhost/${project.basedir}</connection>
   </scm>
 
   <distributionManagement>

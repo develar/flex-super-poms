@@ -76,7 +76,7 @@
         <groupId>com.adobe.flex.framework</groupId>
         <artifactId>playerglobal</artifactId>
         <type>swc</type>
-        <version>10.2</version>
+        <version>11.1</version>
       </dependency>
 
       <dependency>
@@ -94,7 +94,7 @@
       <dependency>
         <groupId>com.adobe.flex.framework</groupId>
         <artifactId>airglobal</artifactId>
-        <version>2.6</version>
+        <version>3.1.0.4880</version>
         <type>swc</type>
       </dependency>
     </dependencies>
@@ -141,7 +141,6 @@
           <localesSourcePath>locales/{locale}</localesSourcePath>
           <accessible>false</accessible>
           <licenseLocalLookup>false</licenseLocalLookup>
-          <targetPlayer>10.2</targetPlayer>
           <compilerWarnings>
             <warn-no-constructor>false</warn-no-constructor>
           </compilerWarnings>
